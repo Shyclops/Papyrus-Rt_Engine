@@ -148,7 +148,7 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_0caN4TeIEee0Cb7xo9L6qw" value="0"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_Bp90UDeJEee0Cb7xo9L6qw" name="r" visibility="private">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Bp90UDeJEee0Cb7xo9L6qw" name="bgr" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_YYWiwByeEduyofBvg4RL2w"/>
         <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_ERvu4DeJEee0Cb7xo9L6qw" value="0"/>
       </ownedAttribute>
@@ -172,10 +172,10 @@
               <language>C++</language>
               <body>log.log(&quot;Start&quot;);&#xD;
 //CImg&lt;unsigned char> map(&quot;external_resources/CImg-2.0.0_pre042717/map.png&quot;);&#xD;
-Mat map = imread(&quot;external_resources/&#xD;
-width = map.width();&#xD;
-height = map.height();&#xD;
-r = map(x,y,0,0);&#xD;
+Mat map = imread(&quot;external_resources/map.png&quot;, CV_LOAD_IMAGE_COLOR);
+split(map,bgr);&#xD;
+width = map.size().width();&#xD;
+height = map.size().height();&#xD;
 &#xD;
 </body>
             </effect>
@@ -241,7 +241,7 @@ while(true){};&#xD;
               <language>C++</language>
               <body>log.log(&quot;preexecute main state&quot;);&#xD;
 log.log(&quot;x: %d, y: %d&quot;, x, y);&#xD;&#xD;
-r = map(x,y,0,0);&#xD;&#xD;
+Scalar intensity = bgr[3].at&lt;uchar>(y,x);&#xD;&#xD;
 log.log(&quot;r: %u&quot;, r);&#xD;&#xD;
 test2.isStartIn(r).send();&#xD;&#xD;
 </body>
@@ -700,4 +700,5 @@ test.isStartOut(true).send();&#xD;
   <UMLRTStateMachines:RTPseudostate xmi:id="_brXnwEoAEeedZqJ4_o8GcQ" base_Pseudostate="_bq-mMEoAEeedZqJ4_o8GcQ"/>
   <UMLRTStateMachines:RTPseudostate xmi:id="_oLpcAEoBEeedZqJ4_o8GcQ" base_Pseudostate="_oLm_wEoBEeedZqJ4_o8GcQ"/>
   <ActionLanguage:TextualRepresentation xmi:id="_zVSOUEt_EeeD4eyKVO2S_Q" base_Comment="_y-eQ0Et_EeeD4eyKVO2S_Q" language="org.eclipse.papyrus.uml.textedit.state.xtext.UmlState"/>
+  <RTCppProperties:AttributeProperties xmi:id="_-bKLYFp5EeeUTq6r8K7lHg" type="Mat bgr[3];" base_Property="_Bp90UDeJEee0Cb7xo9L6qw"/>
 </xmi:XMI>
