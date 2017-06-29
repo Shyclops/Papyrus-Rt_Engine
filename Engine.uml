@@ -281,18 +281,6 @@ test.isReadyIn(x,y,height,width).send();</body>
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_pF7F8TvqEeePyrL5fVHxNw" value="0"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_pl938DvqEeePyrL5fVHxNw" name="r" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_YYWiwByeEduyofBvg4RL2w"/>
-        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_pl-fADvqEeePyrL5fVHxNw" value="0"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_pp8ZADvqEeePyrL5fVHxNw" name="g" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_YYWiwByeEduyofBvg4RL2w"/>
-        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_pp8ZATvqEeePyrL5fVHxNw" value="0"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_pt6TADvqEeePyrL5fVHxNw" name="b" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_YYWiwByeEduyofBvg4RL2w"/>
-        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_pt6TATvqEeePyrL5fVHxNw" value="0"/>
-      </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_qhfFADvqEeePyrL5fVHxNw" name="map" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
@@ -318,13 +306,18 @@ test.isReadyIn(x,y,height,width).send();</body>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fkrzwEAdEeecSdgC5rjddw" value="2"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fl8YAEAdEeecSdgC5rjddw" value="2"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Z2hMIF0eEeeUb-Hf-vFDJg" name="bgr" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_YYWiwByeEduyofBvg4RL2w"/>
+        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_Z2hMIV0eEeeUb-Hf-vFDJg" value="0"/>
+      </ownedAttribute>
       <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_HTMHMDppEeehJIRyir005Q" name="TestContStateMachine" isReentrant="false">
         <region xmi:type="uml:Region" xmi:id="_HTUDADppEeehJIRyir005Q" name="Region">
           <transition xmi:type="uml:Transition" xmi:id="_HTd0ADppEeehJIRyir005Q" name="Initial" source="_HTXtYDppEeehJIRyir005Q" target="_HTb-0DppEeehJIRyir005Q">
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_eK0CIETQEeem9u7KRr3TyA" name="Effect" isReentrant="false">
               <language>C++</language>
               <body>log.log(&quot;testcont initial state&quot;);&#xD;
-CImg&lt;unsigned char> map(&quot;external_resources/CImg-2.0.0_pre042717/map.png&quot;) = new CImg&lt;unsigned char>;</body>
+Mat map = imread(&quot;external_resources/map.png&quot;, CV_LOAD_IMAGE_COLOR);
+split(map,bgr);</body>
             </effect>
           </transition>
           <transition xmi:type="uml:Transition" xmi:id="_g4YcwDvqEeePyrL5fVHxNw" name="" source="_HTb-0DppEeehJIRyir005Q" target="_evMisDvqEeePyrL5fVHxNw">
@@ -357,15 +350,13 @@ directions3.exit().send();</body>
           <transition xmi:type="uml:Transition" xmi:id="_0G7YoDwTEeez78_2BqgPcw" name="" source="_aSLoMDwTEeez78_2BqgPcw" target="_evMisDvqEeePyrL5fVHxNw">
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_IEvK4DwUEeez78_2BqgPcw" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;test cont able to recieve instructions&quot;);&#xD;&#xD;
-if (map(X,Y,0,1)==pathG){&#xD;&#xD;
+              <body>log.log(&quot;test cont able to recieve instructions&quot;);&#xD;if (map(X,Y,0,1)==pathG){&#xD;
 flag = true;&#xD;
-log.log(&quot;Moved&quot;);&#xD;&#xD;
-x = X;&#xD;&#xD;
-y = Y;&#xD;&#xD;
+log.log(&quot;Moved&quot;);&#xD;
+x = X;&#xD;
+y = Y;&#xD;
 } else{&#xD;
-log.log(&quot;Wall&quot;);&#xD;&#xD;
-flag = false;&#xD;&#xD;
+log.log(&quot;Wall&quot;);&#xD;flag = false;&#xD;
 }&#xD;&#xD;
 </body>
             </effect>
@@ -651,7 +642,7 @@ test.isStartOut(true).send();&#xD;
   <UMLRTStateMachines:RTStateMachine xmi:id="_HUiLADppEeehJIRyir005Q" base_StateMachine="_HTMHMDppEeehJIRyir005Q"/>
   <UMLRealTime:Capsule xmi:id="_JMnCsDs0Eee4vrzjGIvOwQ" base_Class="_JK_5IDs0Eee4vrzjGIvOwQ"/>
   <UMLRealTime:CapsulePart xmi:id="___b2kDs1Eee4vrzjGIvOwQ" base_Property="___ZaUDs1Eee4vrzjGIvOwQ"/>
-  <RTCppProperties:CapsuleProperties xmi:id="_2aMIcDvWEeeVBItGYDMaLQ" headerPreface="#include &lt;X11/Xlib.h>&#xA;#include &quot;external_resources/opencv2/core/core.hpp&quot;&#xA;#include &quot;external_resources/opencv2/flann/miniflann.hpp&quot;&#xA;#include &quot;external_resources/opencv2/imgproc/imgproc.hpp&quot;&#xA;#include &quot;external_resources/opencv2/photo/photo.hpp&quot;&#xA;#include &quot;external_resources/opencv2/video/video.hpp&quot;&#xA;#include &quot;external_resources/opencv2/features2d/features2d.hpp&quot;&#xA;#include &quot;external_resources/opencv2/objdetect/objdetect.hpp&quot;&#xA;#include &quot;external_resources/opencv2/calib3d/calib3d.hpp&quot;&#xA;#include &quot;external_resources/opencv2/ml/ml.hpp&quot;&#xA;#include &quot;external_resources/opencv2/highgui/highgui.hpp&quot;&#xA;#include &quot;external_resources/opencv2/contrib/contrib.hpp&quot;&#xA;#include &quot;external_resources/opencv2/core/core_c.h&quot;&#xA;#include &quot;external_resources/opencv2/highgui/highgui_c.h&quot;&#xA;#include &quot;external_resources/opencv2/imgproc/imgproc_c.h&quot;&#xA;using namespace cimg_library;" implementationPreface="#include &lt;X11/Xlib.h>&#xA;#include &quot;external_resources/CImg-2.0.0_pre042717/CImg.h&quot;&#xA;using namespace cimg_library;" base_Class="_9yzxEDbOEeeS0ZUearuafA"/>
+  <RTCppProperties:CapsuleProperties xmi:id="_2aMIcDvWEeeVBItGYDMaLQ" headerPreface="#include &lt;X11/Xlib.h>rib.hpp&quot;&#xA;#include &quot;external_resources/opencv2/core/core_c.h&quot;&#xA;#include &quot;external_resources/opencv2/highgui/highgui_c.h&quot;" implementationPreface="#include &lt;X11/Xlib.h>&#xA;#include &quot;external_resources/opencv2/core/core_c.h&quot;&#xA;#include &quot;external_resources/opencv2/highgui/highgui_c.h&quot;&#xA;" base_Class="_9yzxEDbOEeeS0ZUearuafA"/>
   <RTCppProperties:AttributeProperties xmi:id="_VtyuQDvXEeeVBItGYDMaLQ" type="CImg&lt;unsigned char>" base_Property="_jS5A0DeLEee0Cb7xo9L6qw"/>
   <UMLRealTime:RTPort xmi:id="_HBPk0DvYEeeVBItGYDMaLQ" base_Port="_HBMhgDvYEeeVBItGYDMaLQ"/>
   <UMLRealTime:RTPort xmi:id="_JOxMUDvYEeeVBItGYDMaLQ" isWired="false" base_Port="_JOth8DvYEeeVBItGYDMaLQ"/>
@@ -681,7 +672,7 @@ test.isStartOut(true).send();&#xD;
   <RTCppProperties:AttributeProperties xmi:id="_qhfsEDvqEeePyrL5fVHxNw" type="CImg&lt;unsigned char>" base_Property="_qhfFADvqEeePyrL5fVHxNw"/>
   <UMLRealTime:RTPort xmi:id="_17jUkDvqEeePyrL5fVHxNw" isWired="false" base_Port="_17g4UDvqEeePyrL5fVHxNw"/>
   <UMLRTStateMachines:RTState xmi:id="_T7Sh8DvvEeePyrL5fVHxNw" base_State="_T7QswDvvEeePyrL5fVHxNw"/>
-  <RTCppProperties:CapsuleProperties xmi:id="_u3N84DvvEeePyrL5fVHxNw" headerPreface="#include &lt;X11/Xlib.h>&#xA;#include &quot;external_resources/CImg-2.0.0_pre042717/CImg.h&quot;&#xA;using namespace cimg_library;" implementationPreface="#include &lt;X11/Xlib.h>&#xA;#include &quot;external_resources/CImg-2.0.0_pre042717/CImg.h&quot;&#xA;using namespace cimg_library;" base_Class="__7sO4DmcEeetSfDhTP5ZLQ"/>
+  <RTCppProperties:CapsuleProperties xmi:id="_u3N84DvvEeePyrL5fVHxNw" headerPreface="#include &lt;X11/Xlib.h>rib.hpp&quot;&#xA;#include &quot;external_resources/opencv2/core/core_c.h&quot;&#xA;#include &quot;external_resources/opencv2/highgui/highgui_c.h&quot;" implementationPreface="#include &lt;X11/Xlib.h>rib.hpp&quot;&#xA;#include &quot;external_resources/opencv2/core/core_c.h&quot;&#xA;#include &quot;external_resources/opencv2/highgui/highgui_c.h&quot;" base_Class="__7sO4DmcEeetSfDhTP5ZLQ"/>
   <RTCppProperties:CapsuleProperties xmi:id="_kMQSMDvzEeePyrL5fVHxNw" implementationPreface="#include &lt;stdio.h>&#xD;&#xA;#include &lt;iostream>&#xD;&#xA;using namespace std;&#xD;&#xA;" base_Class="_JK_5IDs0Eee4vrzjGIvOwQ"/>
   <UMLRealTime:RTPort xmi:id="_qi-6ADwPEeez78_2BqgPcw" base_Port="_qi3lQDwPEeez78_2BqgPcw"/>
   <UMLRealTime:RTConnector xmi:id="_vFNIADwPEeez78_2BqgPcw" base_Connector="_vFI2kDwPEeez78_2BqgPcw"/>
@@ -701,4 +692,5 @@ test.isStartOut(true).send();&#xD;
   <UMLRTStateMachines:RTPseudostate xmi:id="_oLpcAEoBEeedZqJ4_o8GcQ" base_Pseudostate="_oLm_wEoBEeedZqJ4_o8GcQ"/>
   <ActionLanguage:TextualRepresentation xmi:id="_zVSOUEt_EeeD4eyKVO2S_Q" base_Comment="_y-eQ0Et_EeeD4eyKVO2S_Q" language="org.eclipse.papyrus.uml.textedit.state.xtext.UmlState"/>
   <RTCppProperties:AttributeProperties xmi:id="_-bKLYFp5EeeUTq6r8K7lHg" type="Mat bgr[3];" base_Property="_Bp90UDeJEee0Cb7xo9L6qw"/>
+  <RTCppProperties:AttributeProperties xmi:id="_Z2jBUF0eEeeUb-Hf-vFDJg" type="Mat bgr[3];" base_Property="_Z2hMIF0eEeeUb-Hf-vFDJg"/>
 </xmi:XMI>
