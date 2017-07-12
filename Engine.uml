@@ -169,8 +169,7 @@
           <transition xmi:type="uml:Transition" xmi:id="_cPiZQDbPEeeS0ZUearuafA" name="Initial" source="_cPCC8DbPEeeS0ZUearuafA" target="_cPUW0DbPEeeS0ZUearuafA">
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_1E_XMDeQEee0Cb7xo9L6qw" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;Start&quot;);&#xD;
-map = imread(&quot;external_resources/map.png&quot;);&#xD;
+              <body>map = imread(&quot;external_resources/map.png&quot;);&#xD;
 width = map.size().width;&#xD;
 height = map.size().height;&#xD;
 &#xD;
@@ -180,14 +179,14 @@ height = map.size().height;&#xD;
           <transition xmi:type="uml:Transition" xmi:id="_PjG-wDmUEeetSfDhTP5ZLQ" name="" source="_cPUW0DbPEeeS0ZUearuafA" target="_bq-mMEoAEeedZqJ4_o8GcQ">
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_FWKXsDmWEeetSfDhTP5ZLQ" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;pre-execute found 1&quot;);</body>
+              <body></body>
             </effect>
             <trigger xmi:type="uml:Trigger" xmi:id="_MpBFEEoPEeedZqJ4_o8GcQ" event="_UHWecDvjEeePyrL5fVHxNw" port="_wEmS4ETrEeem9u7KRr3TyA"/>
           </transition>
           <transition xmi:type="uml:Transition" xmi:id="_cVZCsEAcEeecSdgC5rjddw" name="" source="_Kep4UDmSEeetSfDhTP5ZLQ" target="_ZzlNQEAcEeecSdgC5rjddw">
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_cmESQEn8EeedZqJ4_o8GcQ" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;pre-execute finished exit&quot;);</body>
+              <body></body>
             </effect>
             <trigger xmi:type="uml:Trigger" xmi:id="_nKaPAEAdEeecSdgC5rjddw" event="_XB7xgDvpEeePyrL5fVHxNw" port="_UouR8EAcEeecSdgC5rjddw"/>
           </transition>
@@ -195,28 +194,25 @@ height = map.size().height;&#xD;
             <ownedRule xmi:type="uml:Constraint" xmi:id="_xAlR0EoAEeedZqJ4_o8GcQ">
               <specification xmi:type="uml:OpaqueExpression" xmi:id="_xAlR0UoAEeedZqJ4_o8GcQ">
                 <language>C++</language>
-                <body>log.log(&quot;Flag: %d, continue&quot;, Flag);&#xD;
-return Flag;</body>
+                <body>return Flag;</body>
               </specification>
             </ownedRule>
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_t2m14EoQEeedZqJ4_o8GcQ" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;pre-execute found 2&quot;);</body>
+              <body></body>
             </effect>
           </transition>
           <transition xmi:type="uml:Transition" xmi:id="_1eZg8EoAEeedZqJ4_o8GcQ" name="" guard="_6SErUEoAEeedZqJ4_o8GcQ" source="_bq-mMEoAEeedZqJ4_o8GcQ" target="_cPUW0DbPEeeS0ZUearuafA">
             <ownedRule xmi:type="uml:Constraint" xmi:id="_6SErUEoAEeedZqJ4_o8GcQ">
               <specification xmi:type="uml:OpaqueExpression" xmi:id="_6SErUUoAEeedZqJ4_o8GcQ">
                 <language>C++</language>
-                <body>log.log(&quot;Flag: %d, return&quot;, Flag);&#xD;
-return !Flag;&#xD;
+                <body>return !Flag;&#xD;
 </body>
               </specification>
             </ownedRule>
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_2oZ18EoAEeedZqJ4_o8GcQ" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;pre-execute not found yet&quot;);&#xD;
-if (x != width){&#xD;
+              <body>if (x != width){&#xD;
 x++;&#xD;
 } else {&#xD;
 if (y != height){&#xD;
@@ -236,17 +232,14 @@ while(true){};&#xD;
             </ownedComment>
             <entry xmi:type="uml:OpaqueBehavior" xmi:id="_tKzd8DeHEee0Cb7xo9L6qw" name="Entry" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;preexecute main state&quot;);&#xD;
-log.log(&quot;x: %d, y: %d&quot;, x, y);&#xD;
-Vec3b intensity = map.at&lt;Vec3b>(y, x);
-r = intensity.val[2];&#xD;
-log.log(&quot;r: %u&quot;, r);&#xD;&#xD;
+              <body>Vec3b intensity = map.at&lt;Vec3b>(y, x);
+r = intensity.val[2];&#xD;&#xD;
 test2.isStartIn(r).send();&#xD;&#xD;
 </body>
             </entry>
             <exit xmi:type="uml:OpaqueBehavior" xmi:id="__4M6cEoNEeedZqJ4_o8GcQ" name="Exit" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;pre-execute main exit&quot;);</body>
+              <body></body>
             </exit>
           </subvertex>
           <subvertex xmi:type="uml:State" xmi:id="_Kep4UDmSEeetSfDhTP5ZLQ" name="Finished">
@@ -259,7 +252,7 @@ test.isReadyIn(x,y,height,width).send();</body>
           <subvertex xmi:type="uml:State" xmi:id="_ZzlNQEAcEeecSdgC5rjddw" name="Exited">
             <entry xmi:type="uml:OpaqueBehavior" xmi:id="_nZVnkEn8EeedZqJ4_o8GcQ" name="Entry" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;pre-execute exit&quot;);</body>
+              <body></body>
             </entry>
           </subvertex>
           <subvertex xmi:type="uml:Pseudostate" xmi:id="_bq-mMEoAEeedZqJ4_o8GcQ" name="" kind="choice"/>
@@ -312,15 +305,13 @@ test.isReadyIn(x,y,height,width).send();</body>
           <transition xmi:type="uml:Transition" xmi:id="_HTd0ADppEeehJIRyir005Q" name="Initial" source="_HTXtYDppEeehJIRyir005Q" target="_HTb-0DppEeehJIRyir005Q">
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_eK0CIETQEeem9u7KRr3TyA" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;testcont initial state&quot;);
-map = imread(&quot;external_resources/map.png&quot;);</body>
+              <body>map = imread(&quot;external_resources/map.png&quot;);</body>
             </effect>
           </transition>
           <transition xmi:type="uml:Transition" xmi:id="_g4YcwDvqEeePyrL5fVHxNw" name="" source="_HTb-0DppEeehJIRyir005Q" target="_evMisDvqEeePyrL5fVHxNw">
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_KszggDvsEeePyrL5fVHxNw" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;test cont Ready&quot;);&#xD;
-x = X;&#xD;
+              <body>x = X;&#xD;
 y = Y;&#xD;
 height = Height;&#xD;
 width = Width;</body>
@@ -330,24 +321,21 @@ width = Width;</body>
           <transition xmi:type="uml:Transition" xmi:id="_TWvf4DvuEeePyrL5fVHxNw" name="" source="_evMisDvqEeePyrL5fVHxNw" target="_aSLoMDwTEeez78_2BqgPcw">
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_GQdwsDvvEeePyrL5fVHxNw" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;test cont recieved directions&quot;);&#xD;
-directions2.directionsCalc(x,y,Direction).send();</body>
+              <body>directions2.directionsCalc(x,y,Direction).send();</body>
             </effect>
             <trigger xmi:type="uml:Trigger" xmi:id="_M_IIoDwREeez78_2BqgPcw" event="_KBsHIDwREeez78_2BqgPcw" port="_BJxSwDvmEeePyrL5fVHxNw"/>
           </transition>
           <transition xmi:type="uml:Transition" xmi:id="_Y7u9ADvvEeePyrL5fVHxNw" name="" source="_evMisDvqEeePyrL5fVHxNw" target="_T7QswDvvEeePyrL5fVHxNw">
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_NuN98EAcEeecSdgC5rjddw" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;test cont exiting&quot;);&#xD;
-directions3.exit().send();</body>
+              <body>directions3.exit().send();</body>
             </effect>
             <trigger xmi:type="uml:Trigger" xmi:id="_CHo1AEAfEeecSdgC5rjddw" event="_VNEhoDvpEeePyrL5fVHxNw" port="_BJxSwDvmEeePyrL5fVHxNw"/>
           </transition>
           <transition xmi:type="uml:Transition" xmi:id="_0G7YoDwTEeez78_2BqgPcw" name="" source="_aSLoMDwTEeez78_2BqgPcw" target="_evMisDvqEeePyrL5fVHxNw">
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_IEvK4DwUEeez78_2BqgPcw" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;test cont able to recieve instructions&quot;);
-
+              <body>
 Vec3b intensity = map.at&lt;Vec3b>(Y, X);
 g = intensity.val[1];
 
@@ -367,21 +355,21 @@ log.log(&quot;Wall&quot;);&#xD;flag = false;&#xD;
           <subvertex xmi:type="uml:State" xmi:id="_HTb-0DppEeehJIRyir005Q" name="Waiting">
             <entry xmi:type="uml:OpaqueBehavior" xmi:id="_ggA-8ETQEeem9u7KRr3TyA" name="Entry" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;testcont waiting stae&quot;);</body>
+              <body></body>
             </entry>
           </subvertex>
           <subvertex xmi:type="uml:State" xmi:id="_evMisDvqEeePyrL5fVHxNw" name="Playing">
             <entry xmi:type="uml:OpaqueBehavior" xmi:id="_OiIE4DvvEeePyrL5fVHxNw" name="Entry" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;testcont playing&quot;);&#xD;
+              <body>&#xD;
 log.log(&quot;X: %d, Y: %d&quot;, x, y);</body>
             </entry>
           </subvertex>
           <subvertex xmi:type="uml:State" xmi:id="_T7QswDvvEeePyrL5fVHxNw" name="Finished">
             <entry xmi:type="uml:OpaqueBehavior" xmi:id="_rA9dADvvEeePyrL5fVHxNw" name="Entry" isReentrant="false">
               <language>C++</language>
-              <body>&#xD;
-log.log(&quot;test cont game finished&quot;);</body>
+              <body>log.log(&quot;Game Exited&quot;);
+</body>
             </entry>
           </subvertex>
           <subvertex xmi:type="uml:State" xmi:id="_aSLoMDwTEeez78_2BqgPcw" name="moveTest"/>
@@ -414,7 +402,7 @@ log.log(&quot;test cont game finished&quot;);</body>
           <transition xmi:type="uml:Transition" xmi:id="_Q-G2kDvYEeeVBItGYDMaLQ" name="Initial" source="_Q9-TsDvYEeeVBItGYDMaLQ" target="_sSwBYECXEeeKEZi9P2TNWQ">
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_2NdMkEF_Eeej7Pd2CJeVfw" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;detection initial transisiton&quot;);</body>
+              <body></body>
             </effect>
           </transition>
           <transition xmi:type="uml:Transition" xmi:id="_PFwLcECGEeeKEZi9P2TNWQ" name="" guard="_bMUXkGXIEeeOL4Q9GCeqlQ" source="_Q-DzQDvYEeeVBItGYDMaLQ" target="_Q-DzQDvYEeeVBItGYDMaLQ">
@@ -426,7 +414,7 @@ log.log(&quot;test cont game finished&quot;);</body>
             </ownedRule>
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_dv4kkEn9EeedZqJ4_o8GcQ" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;detection timeout&quot;);</body>
+              <body></body>
             </effect>
             <trigger xmi:type="uml:Trigger" xmi:id="_P7OLIECXEeeKEZi9P2TNWQ" port="_Oo8q8ECXEeeKEZi9P2TNWQ">
               <event xmi:type="uml:CallEvent" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_IaEO8HDxEeSwWKwNKw1iAA"/>
@@ -435,7 +423,7 @@ log.log(&quot;test cont game finished&quot;);</body>
           <transition xmi:type="uml:Transition" xmi:id="_9Q7ZwECXEeeKEZi9P2TNWQ" name="" source="_sSwBYECXEeeKEZi9P2TNWQ" target="_Q-DzQDvYEeeVBItGYDMaLQ">
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_UptqQEn9EeedZqJ4_o8GcQ" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;detection is ready&quot;);</body>
+              <body></body>
             </effect>
             <trigger xmi:type="uml:Trigger" xmi:id="_bmj7cECYEeeKEZi9P2TNWQ" event="_QT6zoDvkEeePyrL5fVHxNw" port="_raos0DvlEeePyrL5fVHxNw"/>
           </transition>
@@ -443,8 +431,7 @@ log.log(&quot;test cont game finished&quot;);</body>
           <subvertex xmi:type="uml:State" xmi:id="_Q-DzQDvYEeeVBItGYDMaLQ" name="Playing">
             <entry xmi:type="uml:OpaqueBehavior" xmi:id="_IsG1EDvhEeePyrL5fVHxNw" name="Entry" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;detection playing&quot;);&#xD;
-//0 = up&#xD;
+              <body>//0 = up&#xD;
 //1 = down&#xD;
 //2 = left&#xD;
 //3 = right&#xD;&#xD;
@@ -452,19 +439,15 @@ int c = 0; &#xD;&#xD;
 switch((c=fgetc(stdin))){&#xD;&#xD;
 case 119:&#xD;
 directions.directions(0).send();&#xD;
-log.log(&quot;up&quot;);&#xD;
 break;&#xD;
 case 115:&#xD;
 directions.directions(1).send();&#xD;
-log.log(&quot;down&quot;);&#xD;
 break;&#xD;
 case 97:&#xD;
 directions.directions(2).send();&#xD;
-log.log(&quot;left&quot;);&#xD;
 break;&#xD;
 case 100:&#xD;
 directions.directions(3).send();&#xD;
-log.log(&quot;right&quot;);&#xD;
 break;&#xD;
 case 27:&#xD;
 directions.exits().send();&#xD;
@@ -478,7 +461,7 @@ timing.informIn(UMLRTTimespec(this->delay,0));</body>
           <subvertex xmi:type="uml:State" xmi:id="_sSwBYECXEeeKEZi9P2TNWQ" name="Waiting">
             <entry xmi:type="uml:OpaqueBehavior" xmi:id="_HOnzMETQEeem9u7KRr3TyA" name="Entry" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;detection waiting state&quot;);</body>
+              <body></body>
             </entry>
           </subvertex>
         </region>
@@ -500,21 +483,20 @@ timing.informIn(UMLRTTimespec(this->delay,0));</body>
           <transition xmi:type="uml:Transition" xmi:id="_I0LWgDviEeePyrL5fVHxNw" name="Initial" source="_I0CMkDviEeePyrL5fVHxNw" target="_I0I6QDviEeePyrL5fVHxNw">
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ou1lcEn9EeedZqJ4_o8GcQ" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;calc initial&quot;);</body>
+              <body></body>
             </effect>
           </transition>
           <transition xmi:type="uml:Transition" xmi:id="_9lwkADvmEeePyrL5fVHxNw" name="" source="_I0I6QDviEeePyrL5fVHxNw" target="_oLm_wEoBEeedZqJ4_o8GcQ">
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_bB7XQEoCEeedZqJ4_o8GcQ" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;calc test transition&quot;);</body>
+              <body></body>
             </effect>
             <trigger xmi:type="uml:Trigger" xmi:id="_-tr1YDvmEeePyrL5fVHxNw" event="_Wp6h0DvjEeePyrL5fVHxNw" port="_s58_8DvkEeePyrL5fVHxNw"/>
           </transition>
           <transition xmi:type="uml:Transition" xmi:id="_kql_kDvpEeePyrL5fVHxNw" name="" source="_5hGJ0DvoEeePyrL5fVHxNw" target="_5hGJ0DvoEeePyrL5fVHxNw">
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_IaS9QDvqEeePyrL5fVHxNw" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;Calculation direction calc&quot;);&#xD;
-//0 = up&#xD;
+              <body>//0 = up&#xD;
 //1 = down&#xD;
 //2 = left&#xD;
 //3 = right&#xD;
@@ -534,14 +516,14 @@ directions.directionCalc(++X,Y).send();&#xD;
           <transition xmi:type="uml:Transition" xmi:id="_3rHdsEAcEeecSdgC5rjddw" name="" source="_I0I6QDviEeePyrL5fVHxNw" target="_smFqAEAcEeecSdgC5rjddw">
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_9zbZkEn9EeedZqJ4_o8GcQ" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;calc testing exit&quot;);</body>
+              <body></body>
             </effect>
             <trigger xmi:type="uml:Trigger" xmi:id="_amvTEEAdEeecSdgC5rjddw" event="_XB7xgDvpEeePyrL5fVHxNw" port="_ms43cEAbEeecSdgC5rjddw"/>
           </transition>
           <transition xmi:type="uml:Transition" xmi:id="_525_0EAcEeecSdgC5rjddw" name="" source="_5hGJ0DvoEeePyrL5fVHxNw" target="_smFqAEAcEeecSdgC5rjddw">
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_7JHvcEn9EeedZqJ4_o8GcQ" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;calc coord exit&quot;);</body>
+              <body></body>
             </effect>
             <trigger xmi:type="uml:Trigger" xmi:id="_cAMZUEAdEeecSdgC5rjddw" event="_XB7xgDvpEeePyrL5fVHxNw" port="_ms43cEAbEeecSdgC5rjddw"/>
           </transition>
@@ -549,31 +531,28 @@ directions.directionCalc(++X,Y).send();&#xD;
             <ownedRule xmi:type="uml:Constraint" xmi:id="_y-q5sEoBEeedZqJ4_o8GcQ">
               <specification xmi:type="uml:OpaqueExpression" xmi:id="_y-rgwEoBEeedZqJ4_o8GcQ">
                 <language>C++</language>
-                <body>log.log(&quot;R: %u, startR : %d&quot;, R, startR);&#xD;
-if (R != startR){&#xD;
+                <body>if (R != startR){&#xD;
 return true;&#xD;
 }</body>
               </specification>
             </ownedRule>
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_xCzC4EoBEeedZqJ4_o8GcQ" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;calculation still searching transistion&quot;);&#xD;
-test.isStartOut(false).send();</body>
+              <body>test.isStartOut(false).send();</body>
             </effect>
           </transition>
           <transition xmi:type="uml:Transition" xmi:id="_1pTT8EoBEeedZqJ4_o8GcQ" guard="_4feP0EoBEeedZqJ4_o8GcQ" source="_oLm_wEoBEeedZqJ4_o8GcQ" target="_5hGJ0DvoEeePyrL5fVHxNw">
             <ownedRule xmi:type="uml:Constraint" xmi:id="_4feP0EoBEeedZqJ4_o8GcQ">
               <specification xmi:type="uml:OpaqueExpression" xmi:id="_4fe24EoBEeedZqJ4_o8GcQ">
                 <language>C++</language>
-                <body>log.log(&quot;R: %u, startR : %d&quot;, R, startR);&#xD;
-if (R == startR){&#xD;
+                <body>if (R == startR){&#xD;
 return true;&#xD;
 }</body>
               </specification>
             </ownedRule>
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_H9xw4EoCEeedZqJ4_o8GcQ" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;calculation transition&quot;);&#xD;
+              <body>&#xD;
 test.isStartOut(true).send();&#xD;
 </body>
             </effect>
@@ -582,13 +561,13 @@ test.isStartOut(true).send();&#xD;
           <subvertex xmi:type="uml:State" xmi:id="_I0I6QDviEeePyrL5fVHxNw" name="Testing">
             <entry xmi:type="uml:OpaqueBehavior" xmi:id="_8bExEETPEeem9u7KRr3TyA" name="Entry" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;calculation testing state&quot;);</body>
+              <body></body>
             </entry>
           </subvertex>
           <subvertex xmi:type="uml:State" xmi:id="_5hGJ0DvoEeePyrL5fVHxNw" name="CoordinateCalculater">
             <entry xmi:type="uml:OpaqueBehavior" xmi:id="_xAEb0En9EeedZqJ4_o8GcQ" name="Entry" isReentrant="false">
               <language>C++</language>
-              <body>log.log(&quot;calculation coordinates&quot;);</body>
+              <body></body>
             </entry>
           </subvertex>
           <subvertex xmi:type="uml:State" xmi:id="_smFqAEAcEeecSdgC5rjddw" name="Exited">
