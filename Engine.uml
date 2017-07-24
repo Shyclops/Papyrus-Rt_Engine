@@ -238,10 +238,9 @@ test.isReadyIn(X,Y).send();</body>
               <body>x = X;&#xD;
 y = Y;
 
-Event e1;&#xD;
-    e1.setSourceName(this->getName());&#xD;
-    e1.setParam(&quot;x&quot;, x);&#xD;
-    e1.setParam(&quot;y&quot;, y);&#xD;
+Event e1;
+    e1.setSourceName(this->getName());
+    e1.setParam(&quot;cmd&quot;, &quot;update&quot;);
     observation.event(e1).send();</body>
             </effect>
             <trigger xmi:type="uml:Trigger" xmi:id="_0ob3IGftEee-Kre0NmQF5w" event="_QT6zoDvkEeePyrL5fVHxNw" port="_17g4UDvqEeePyrL5fVHxNw"/>
@@ -449,21 +448,20 @@ if (intensity.val[2] == emptyR){
 log.log(&quot;moved&quot;);
 directions.directionCalc(x,y).send();
 intensity.val[2]=startR;
+map.at&lt;Vec3b>(Point(x,y)) = intensity;
 Vec3b pIntensity = map.at&lt;Vec3b>(Y,X);
 pIntensity.val[2]=emptyR;
+map.at&lt;Vec3b>(Point(X,Y)) = pIntensity;
+
+std::vector&lt;int> compression_params;
+compression_params.push_back(CV_IMWRITE_PNG_COMPRESSION);
+compression_params.push_back(9);
+
+imwrite(&quot;external_resources/map.png&quot;, map, compression_params);
+
 Event e1;
-    e1.setParam(&quot;x&quot;, x);&#xD;
-    e1.setParam(&quot;y&quot;, y);&#xD;
-    e1.setParam(&quot;r&quot;, intensity.val[2]);&#xD;
-    e1.setParam(&quot;g&quot;, intensity.val[1]);
-    e1.setParam(&quot;b&quot;, intensity.val[0]);&#xD;
-    observation.event(e1).send();
-Event e2;
-    e1.setParam(&quot;x&quot;, X);&#xD;
-    e1.setParam(&quot;y&quot;, Y);&#xD;
-    e1.setParam(&quot;r&quot;, pIntensity.val[2]);&#xD;
-    e1.setParam(&quot;g&quot;, pIntensity.val[1]);
-    e1.setParam(&quot;b&quot;, pIntensity.val[0]);&#xD;
+    e1.setSourceName(this->getName());
+    e1.setParam(&quot;cmd&quot;, &quot;update&quot;);
     observation.event(e1).send();
 } else {
 log.log(&quot;wall&quot;);
@@ -756,7 +754,7 @@ timer.informEvery(UMLRTTimespec(0,500000000));</body>
   <UMLRealTime:RTConnector xmi:id="_Or-r4ETsEeem9u7KRr3TyA" base_Connector="_Od3XYETsEeem9u7KRr3TyA"/>
   <ActionLanguage:TextualRepresentation xmi:id="_zVSOUEt_EeeD4eyKVO2S_Q" base_Comment="_y-eQ0Et_EeeD4eyKVO2S_Q" language="org.eclipse.papyrus.uml.textedit.state.xtext.UmlState"/>
   <UMLRTStateMachines:RTState xmi:id="_5YYYEGftEee-Kre0NmQF5w" base_State="_5YWi4GftEee-Kre0NmQF5w"/>
-  <RTCppProperties:CapsuleProperties xmi:id="_q_ffkGfwEee-Kre0NmQF5w" headerPreface="#include &quot;external_resources/opencv/sources/modules/core/include/opencv2/core.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/highgui/include/opencv2/highgui.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/imgcodecs/include/opencv2/imgcodecs.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/imgproc/include/opencv2/imgproc.hpp&quot;&#xA;using namespace cv;" implementationPreface="#include &quot;external_resources/opencv/sources/modules/core/include/opencv2/core.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/highgui/include/opencv2/highgui.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/imgcodecs/include/opencv2/imgcodecs.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/imgproc/include/opencv2/imgproc.hpp&quot;&#xA;using namespace cv;" base_Class="_LFgVYDvhEeePyrL5fVHxNw"/>
+  <RTCppProperties:CapsuleProperties xmi:id="_q_ffkGfwEee-Kre0NmQF5w" headerPreface="#include &lt;vector>&#xA;#include &quot;external_resources/opencv/sources/modules/core/include/opencv2/core.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/highgui/include/opencv2/highgui.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/imgcodecs/include/opencv2/imgcodecs.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/imgproc/include/opencv2/imgproc.hpp&quot;&#xA;using namespace cv;" implementationPreface="#include &quot;external_resources/opencv/sources/modules/core/include/opencv2/core.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/highgui/include/opencv2/highgui.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/imgcodecs/include/opencv2/imgcodecs.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/imgproc/include/opencv2/imgproc.hpp&quot;&#xA;using namespace cv;" base_Class="_LFgVYDvhEeePyrL5fVHxNw"/>
   <RTCppProperties:AttributeProperties xmi:id="_XzrVgGfxEee-Kre0NmQF5w" type="Mat" base_Property="_XzqHYGfxEee-Kre0NmQF5w"/>
   <UMLRTStateMachines:RTPseudostate xmi:id="_Xrw6MGfyEee-Kre0NmQF5w" base_Pseudostate="_XrsowGfyEee-Kre0NmQF5w"/>
   <UMLRealTime:ProtocolContainer xmi:id="_qQfRwG4VEeeUNoAgRbC5hw" base_Package="_qQdckW4VEeeUNoAgRbC5hw"/>
