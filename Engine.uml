@@ -64,14 +64,7 @@
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_NBnx4DvjEeePyrL5fVHxNw" client="_NBM7IDvjEeePyrL5fVHxNw" supplier="_NBkHgDvjEeePyrL5fVHxNw" contract="_NBkHgDvjEeePyrL5fVHxNw"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_NBZIYDvjEeePyrL5fVHxNw" name="Test">
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_Wp5TsDvjEeePyrL5fVHxNw" name="isStartIn">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_nrDHkDvjEeePyrL5fVHxNw" name="X">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_VJKsgGfwEee-Kre0NmQF5w" name="Y">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-          </ownedParameter>
-        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Wp5TsDvjEeePyrL5fVHxNw" name="isStartIn"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_QT6MkDvkEeePyrL5fVHxNw" name="isReadyIn">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_rLS6MDvuEeePyrL5fVHxNw" name="X">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -98,6 +91,9 @@
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedParameter>
         </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_ri_N0HFqEeepH5jGTij4Cg" name="zombieOut">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ucGI8HFqEeepH5jGTij4Cg" name="data" type="_UZLPEHFpEeepH5jGTij4Cg"/>
+        </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Usage" xmi:id="_NBiSUDvjEeePyrL5fVHxNw" client="_NBM7IDvjEeePyrL5fVHxNw" supplier="_NBf2EDvjEeePyrL5fVHxNw"/>
       <packagedElement xmi:type="uml:AnyReceiveEvent" xmi:id="_NBiSUTvjEeePyrL5fVHxNw" name="*"/>
@@ -107,6 +103,7 @@
       <packagedElement xmi:type="uml:CallEvent" xmi:id="_Wp6h0DvjEeePyrL5fVHxNw" operation="_Wp5TsDvjEeePyrL5fVHxNw"/>
       <packagedElement xmi:type="uml:CallEvent" xmi:id="_O4eJUDvkEeePyrL5fVHxNw" operation="_O4c7MDvkEeePyrL5fVHxNw"/>
       <packagedElement xmi:type="uml:CallEvent" xmi:id="_QT6zoDvkEeePyrL5fVHxNw" operation="_QT6MkDvkEeePyrL5fVHxNw"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_rjK0AHFqEeepH5jGTij4Cg" operation="_ri_N0HFqEeepH5jGTij4Cg"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_B6RyMDbOEeeS0ZUearuafA" name="Top" isActive="true">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_SQAVkDliEeeHA4oSpVV8Ow" name="test" visibility="protected" type="_9yzxEDbOEeeS0ZUearuafA" isOrdered="true" aggregation="composite"/>
@@ -377,7 +374,7 @@ timing.informIn(UMLRTTimespec(this->delay,0));</body>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_s58_8DvkEeePyrL5fVHxNw" name="test" visibility="public" type="_NBM7IDvjEeePyrL5fVHxNw" isOrdered="true" aggregation="composite" isBehavior="true"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_lz21EDvmEeePyrL5fVHxNw" name="startR" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_lz21ETvmEeePyrL5fVHxNw" value="127"/>
+        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_lz21ETvmEeePyrL5fVHxNw" value="85"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_ms43cEAbEeecSdgC5rjddw" name="directions2" visibility="protected" type="_EpeekDmbEeetSfDhTP5ZLQ" isOrdered="true" aggregation="composite" isBehavior="true" isService="false"/>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_-4kuQETPEeem9u7KRr3TyA" name="log" visibility="protected" isOrdered="true" aggregation="composite" isBehavior="true" isService="false">
@@ -387,18 +384,20 @@ timing.informIn(UMLRTTimespec(this->delay,0));</body>
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_lDpBoWfvEee-Kre0NmQF5w" value="255"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_8uKyUHFoEeepH5jGTij4Cg" name="zombieR" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_8uKyUXFoEeepH5jGTij4Cg" value="170"/>
+      </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_XzqHYGfxEee-Kre0NmQF5w" name="map" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_kd4h0GfyEee-Kre0NmQF5w" name="flag" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_rJv84GfyEee-Kre0NmQF5w"/>
-      </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_FrqjEGf4Eee-Kre0NmQF5w" name="x" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_H2xecHFpEeepH5jGTij4Cg" value="0"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_JskMsGf4Eee-Kre0NmQF5w" name="y" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_I3bDIHFpEeepH5jGTij4Cg" value="0"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_KUyqUGf4Eee-Kre0NmQF5w" name="height" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -407,6 +406,7 @@ timing.informIn(UMLRTTimespec(this->delay,0));</body>
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_0vUoIG4VEeeUNoAgRbC5hw" name="observation" visibility="protected" type="_qQdckm4VEeeUNoAgRbC5hw" isOrdered="true" aggregation="composite" isBehavior="true" isService="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_X-Zz4HFqEeepH5jGTij4Cg" name="zombieVector" visibility="private" type="_UZLPEHFpEeepH5jGTij4Cg"/>
       <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_Iz1_UDviEeePyrL5fVHxNw" name="CalculationStateMachine" isReentrant="false">
         <region xmi:type="uml:Region" xmi:id="_Iz97IDviEeePyrL5fVHxNw" name="Region">
           <transition xmi:type="uml:Transition" xmi:id="_I0LWgDviEeePyrL5fVHxNw" name="Initial" source="_I0CMkDviEeePyrL5fVHxNw" target="_I0I6QDviEeePyrL5fVHxNw">
@@ -490,26 +490,24 @@ height = map.size().height;
             <ownedRule xmi:type="uml:Constraint" xmi:id="_7QNDEGfyEee-Kre0NmQF5w">
               <specification xmi:type="uml:OpaqueExpression" xmi:id="_7QNqIGfyEee-Kre0NmQF5w">
                 <language>C++</language>
-                <body>return flag;</body>
+                <body>return (y==height);</body>
               </specification>
             </ownedRule>
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_WIAzAGfzEee-Kre0NmQF5w" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>test.isStartOut(x,y).send();
-flag = false;</body>
+              <body>test2.zombieOut(zombieVector).send();</body>
             </effect>
           </transition>
           <transition xmi:type="uml:Transition" xmi:id="_9g89sGfyEee-Kre0NmQF5w" name="notFound" guard="_IUOTAGfzEee-Kre0NmQF5w" kind="external" source="_XrsowGfyEee-Kre0NmQF5w" target="_XrsowGfyEee-Kre0NmQF5w">
             <ownedRule xmi:type="uml:Constraint" xmi:id="_IUOTAGfzEee-Kre0NmQF5w">
               <specification xmi:type="uml:OpaqueExpression" xmi:id="_IUOTAWfzEee-Kre0NmQF5w">
                 <language>C++</language>
-                <body>return !flag;</body>
+                <body>return (y!=height);</body>
               </specification>
             </ownedRule>
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_HXMDAGfzEee-Kre0NmQF5w" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>
-if (x != width){&#xD;
+              <body>if (x != width){&#xD;
 x++;&#xD;
 } else {&#xD;
 if (y != height){&#xD;
@@ -520,7 +518,14 @@ log.log(&quot;FAILURE&quot;);&#xD;
 while(true){};&#xD;
 }}
 Vec3b intensity = map.at&lt;Vec3b>(y, x);&#xD;
-flag = (intensity.val[2] == startR);</body>
+if (intensity.val[2] == startR){
+test.isStartOut(x,y).send();
+}
+if (intensity.val[2]==zombieR){
+Zombie tempZombie = new Zombie(x,y);
+zombieVector.push_back(tempZombie);
+}
+</body>
             </effect>
           </transition>
           <transition xmi:type="uml:Transition" xmi:id="_ETVbAGf0Eee-Kre0NmQF5w" name="" kind="external" source="_5hGJ0DvoEeePyrL5fVHxNw" target="_smFqAEAcEeecSdgC5rjddw">
@@ -548,6 +553,47 @@ flag = (intensity.val[2] == startR);</body>
           <subvertex xmi:type="uml:Pseudostate" xmi:id="_XrsowGfyEee-Kre0NmQF5w" name="" kind="choice"/>
         </region>
       </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_UZLPEHFpEeepH5jGTij4Cg" name="ZombieVector"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_VDAPMHFpEeepH5jGTij4Cg" name="Zombie">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ZhUNkHFpEeepH5jGTij4Cg" name="x">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_bcvYcHFpEeepH5jGTij4Cg" name="y">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_eTN2UHFpEeepH5jGTij4Cg" name="d">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_eTN2UXFpEeepH5jGTij4Cg" value="0"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_nneP8HFpEeepH5jGTij4Cg" specification="_fe9QsHFpEeepH5jGTij4Cg">
+        <language>C++</language>
+        <body>x = newX;
+y = newY;</body>
+      </ownedBehavior>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_fe9QsHFpEeepH5jGTij4Cg" name="Zombie" method="_nneP8HFpEeepH5jGTij4Cg">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_iWgFkHFpEeepH5jGTij4Cg" name="newX">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_kk7sAHFpEeepH5jGTij4Cg" name="newY">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_8ypNMHFpEeepH5jGTij4Cg" name="move">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_8ypNMXFpEeepH5jGTij4Cg" name="newX">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_8ypNMnFpEeepH5jGTij4Cg" name="newY">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ANcgIHFqEeepH5jGTij4Cg" name="position"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_JtUT4HFqEeepH5jGTij4Cg" name="changeDirection">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_JtUT4XFqEeepH5jGTij4Cg" name="newD" effect="create">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_NKMqcHFqEeepH5jGTij4Cg" name="currentDirection"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_qQdckG4VEeeUNoAgRbC5hw" name="Observation">
       <packagedElement xmi:type="uml:Package" xmi:id="_qQdckW4VEeeUNoAgRbC5hw" name="Observation">
@@ -788,4 +834,5 @@ timer.informEvery(UMLRTTimespec(0,500000000));</body>
   <UMLRealTime:RTPort xmi:id="_z_BzoG4VEeeUNoAgRbC5hw" isNotification="false" isPublish="false" isWired="false" registration="Automatic" registrationOverride="" base_Port="_z_BMkG4VEeeUNoAgRbC5hw"/>
   <UMLRealTime:RTPort xmi:id="_0vVPMG4VEeeUNoAgRbC5hw" isNotification="false" isPublish="false" isWired="false" registration="Automatic" registrationOverride="" base_Port="_0vUoIG4VEeeUNoAgRbC5hw"/>
   <UMLRealTime:CapsulePart xmi:id="_-G2_QG4VEeeUNoAgRbC5hw" base_Property="_-GxfsG4VEeeUNoAgRbC5hw"/>
+  <RTCppProperties:PassiveClassProperties xmi:id="_QsY-0HFqEeepH5jGTij4Cg" headerPreface="#include &lt;vector>" base_Class="_UZLPEHFpEeepH5jGTij4Cg" privateDeclarations="std::vector&lt;Zombie>"/>
 </xmi:XMI>
