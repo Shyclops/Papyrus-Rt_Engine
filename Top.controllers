@@ -1,0 +1,7 @@
+Top = MainThread
+Top.test = TestThread
+Top.testCont = TestThread
+Top.calculation = CalculationThread
+Top.detection = DetectionThread
+Top.zombieBehavior = ZombieThread
+Top.observer = ObserverThread

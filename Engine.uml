@@ -58,12 +58,12 @@
       <packagedElement xmi:type="uml:CallEvent" xmi:id="_IyvnwDwREeez78_2BqgPcw" operation="_IytLgDwREeez78_2BqgPcw"/>
       <packagedElement xmi:type="uml:CallEvent" xmi:id="_KBsHIDwREeez78_2BqgPcw" operation="_KBqR8DwREeez78_2BqgPcw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_NBRMkDvjEeePyrL5fVHxNw" name="Test">
-      <packagedElement xmi:type="uml:Collaboration" xmi:id="_NBM7IDvjEeePyrL5fVHxNw" name="Test">
+    <packagedElement xmi:type="uml:Package" xmi:id="_NBRMkDvjEeePyrL5fVHxNw" name="Status">
+      <packagedElement xmi:type="uml:Collaboration" xmi:id="_NBM7IDvjEeePyrL5fVHxNw" name="Status">
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_NBeA4DvjEeePyrL5fVHxNw" client="_NBM7IDvjEeePyrL5fVHxNw" supplier="_NBZIYDvjEeePyrL5fVHxNw" contract="_NBZIYDvjEeePyrL5fVHxNw"/>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_NBnx4DvjEeePyrL5fVHxNw" client="_NBM7IDvjEeePyrL5fVHxNw" supplier="_NBkHgDvjEeePyrL5fVHxNw" contract="_NBkHgDvjEeePyrL5fVHxNw"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_NBZIYDvjEeePyrL5fVHxNw" name="Test">
+      <packagedElement xmi:type="uml:Interface" xmi:id="_NBZIYDvjEeePyrL5fVHxNw" name="Status">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_Wp5TsDvjEeePyrL5fVHxNw" name="isStartIn"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_QT6MkDvkEeePyrL5fVHxNw" name="isReadyIn">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_rLS6MDvuEeePyrL5fVHxNw" name="X">
@@ -74,7 +74,7 @@
           </ownedParameter>
         </ownedOperation>
       </packagedElement>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_NBf2EDvjEeePyrL5fVHxNw" name="Test~">
+      <packagedElement xmi:type="uml:Interface" xmi:id="_NBf2EDvjEeePyrL5fVHxNw" name="Status~">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_UHUpQDvjEeePyrL5fVHxNw" name="isStartOut">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_fSRqgGfwEee-Kre0NmQF5w" name="X">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -92,7 +92,7 @@
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_ri_N0HFqEeepH5jGTij4Cg" name="zombieOut" visibility="public">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ucGI8HFqEeepH5jGTij4Cg" name="data" type="_hizCkHIrEeeJYpdF89kMeA"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ucGI8HFqEeepH5jGTij4Cg" name="data" type="_ONiHkHuuEee7RKzKc_Azzg"/>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_WhB84HbOEeeXs9sY7gI7cA" name="max">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedParameter>
@@ -100,7 +100,7 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Usage" xmi:id="_NBiSUDvjEeePyrL5fVHxNw" client="_NBM7IDvjEeePyrL5fVHxNw" supplier="_NBf2EDvjEeePyrL5fVHxNw"/>
       <packagedElement xmi:type="uml:AnyReceiveEvent" xmi:id="_NBiSUTvjEeePyrL5fVHxNw" name="*"/>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_NBkHgDvjEeePyrL5fVHxNw" name="TestIO"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_NBkHgDvjEeePyrL5fVHxNw" name="StatusIO"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_NBoY8DvjEeePyrL5fVHxNw" client="_NBM7IDvjEeePyrL5fVHxNw" supplier="_NBkHgDvjEeePyrL5fVHxNw"/>
       <packagedElement xmi:type="uml:CallEvent" xmi:id="_UHWecDvjEeePyrL5fVHxNw" operation="_UHUpQDvjEeePyrL5fVHxNw"/>
       <packagedElement xmi:type="uml:CallEvent" xmi:id="_Wp6h0DvjEeePyrL5fVHxNw" operation="_Wp5TsDvjEeePyrL5fVHxNw"/>
@@ -199,7 +199,7 @@ test.isReadyIn(X,Y).send();</body>
         </region>
       </ownedBehavior>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="__7sO4DmcEeetSfDhTP5ZLQ" name="TestCont" classifierBehavior="_HTMHMDppEeehJIRyir005Q" isActive="true">
+    <packagedElement xmi:type="uml:Class" xmi:id="__7sO4DmcEeetSfDhTP5ZLQ" name="Running" classifierBehavior="_HTMHMDppEeehJIRyir005Q" isActive="true">
       <ownedAttribute xmi:type="uml:Port" xmi:id="_BJxSwDvmEeePyrL5fVHxNw" name="directions" visibility="public" type="_EpeekDmbEeetSfDhTP5ZLQ" isOrdered="true" aggregation="composite" isBehavior="true"/>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_MRDJMDvmEeePyrL5fVHxNw" name="log" visibility="protected" isOrdered="true" aggregation="composite" isBehavior="true" isService="false">
         <type xmi:type="uml:Collaboration" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_6kIb0IeXEeSVyrlWP4nYew"/>
@@ -269,8 +269,7 @@ y = Y;
           <subvertex xmi:type="uml:State" xmi:id="_evMisDvqEeePyrL5fVHxNw" name="Playing">
             <entry xmi:type="uml:OpaqueBehavior" xmi:id="_OiIE4DvvEeePyrL5fVHxNw" name="Entry" isReentrant="false">
               <language>C++</language>
-              <body>&#xD;
-log.log(&quot;X: %d, Y: %d&quot;, x, y);</body>
+              <body></body>
             </entry>
           </subvertex>
           <subvertex xmi:type="uml:State" xmi:id="_T7QswDvvEeePyrL5fVHxNw" name="Finished">
@@ -419,6 +418,10 @@ timing.informIn(UMLRTTimespec(this->delay,0));</body>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_57VOUHb6EeeKIIc_475P2A" name="test2" visibility="public" type="_NBM7IDvjEeePyrL5fVHxNw" isOrdered="true" aggregation="composite" isBehavior="true"/>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_7pOTgHb6EeeKIIc_475P2A" name="directions2" visibility="public" type="_EpeekDmbEeetSfDhTP5ZLQ" isOrdered="true" aggregation="composite" isBehavior="true"/>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_hqCNkHovEeesmeF6iS6c6Q" name="observation" visibility="protected" type="_fE_d9HovEeesmeF6iS6c6Q" isOrdered="true" aggregation="composite" isBehavior="true" isService="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_MqrREHvXEee7RKzKc_Azzg" name="startDirection">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_P57bUHvXEee7RKzKc_Azzg" value="0"/>
+      </ownedAttribute>
       <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_Iz1_UDviEeePyrL5fVHxNw" name="CalculationStateMachine" isReentrant="false">
         <region xmi:type="uml:Region" xmi:id="_Iz97IDviEeePyrL5fVHxNw" name="Region">
           <transition xmi:type="uml:Transition" xmi:id="_I0LWgDviEeePyrL5fVHxNw" name="Initial" source="_I0CMkDviEeePyrL5fVHxNw" target="_I0I6QDviEeePyrL5fVHxNw">
@@ -457,7 +460,6 @@ height = map.size().height;&#xD;
     Vec3b intensity = map.at&lt;Vec3b>(y, x);
     Vec3b pIntensity = map.at&lt;Vec3b>(Y,X);
     if (intensity.val[2] == emptyR){
-    log.log(&quot;moved&quot;);
     if (pIntensity.val[2] == startR){
     directions.directionCalc(x,y).send();
     intensity.val[2]=startR;
@@ -473,10 +475,8 @@ height = map.size().height;&#xD;
     compression_params.push_back(9);
     imwrite(&quot;external_resources/map.png&quot;, map, compression_params);
     } else if (intensity.val[2]== zombieR){
-    log.log(&quot;Enemy&quot;);
     directions2.exit().send();
 }else {
-    log.log(&quot;wall&quot;);
      if (pIntensity.val[2] == startR){
     directions.directionCalc(X,Y).send();
     intensity.val[2]=startR;
@@ -499,7 +499,7 @@ if  (intensity.val[2] == startR){
 } else if (intensity.val[2]==zombieR){
 Zombie tempZombie;
 tempZombie.move(x,y);
-tempZombie.changeDirection(0);
+tempZombie.changeDirection(startDirection);
 zombieVector.addZVector(tempZombie);
 }
 width = map.size().width;
@@ -518,8 +518,10 @@ height = map.size().height;
             </ownedRule>
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_WIAzAGfzEee-Kre0NmQF5w" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>    test2.zombieOut(zombieVector, zombies).send();
-log.log(&quot;Zombies sent&quot;);</body>
+              <body>VectorWrapper wrapper;
+wrapper.zombieVectorWrapper = zombieVector;
+    
+test2.zombieOut(wrapper, zombies).send();</body>
             </effect>
           </transition>
           <transition xmi:type="uml:Transition" xmi:id="_9g89sGfyEee-Kre0NmQF5w" name="notFound" guard="_IUOTAGfzEee-Kre0NmQF5w" source="_XrsowGfyEee-Kre0NmQF5w" target="_XrsowGfyEee-Kre0NmQF5w">
@@ -548,7 +550,7 @@ log.log(&quot;Zombies sent&quot;);</body>
 } else if (intensity.val[2]==zombieR){
 Zombie tempZombie;
 tempZombie.move(x,y);
-tempZombie.changeDirection(0);
+tempZombie.changeDirection(startDirection);
 zombieVector.addZVector(tempZombie);
 zombies++;
 }
@@ -617,11 +619,9 @@ zombies++;
           <transition xmi:type="uml:Transition" xmi:id="_gHvSEHbGEeeXs9sY7gI7cA" name="" kind="external" source="_x4BHsHbEEeeXs9sY7gI7cA" target="_Xh0lIHbGEeeXs9sY7gI7cA">
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_NKuuIHbJEeeXs9sY7gI7cA" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>zombieVector = data;
+              <body>zombieVector = data.zombieVectorWrapper;
 maxZombie = max;
-index = max;
-log.log(&quot;max zombie: %d&quot;, maxZombie);
-log.log(&quot;retrieved Zombies&quot;);</body>
+index = max+1;</body>
             </effect>
             <trigger xmi:type="uml:Trigger" xmi:id="_8Dpt4HbHEeeXs9sY7gI7cA" event="_rjK0AHFqEeepH5jGTij4Cg" port="_yYpdoHbGEeeXs9sY7gI7cA"/>
           </transition>
@@ -637,16 +637,18 @@ log.log(&quot;retrieved Zombies&quot;);</body>
           <transition xmi:type="uml:Transition" xmi:id="_UfmiwHbxEeeKIIc_475P2A" name="" kind="external" source="_IVV5QHbZEeeXs9sY7gI7cA" target="_Xh0lIHbGEeeXs9sY7gI7cA">
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_RWT1kHb8EeeKIIc_475P2A" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>zombieVector.getZombie(index).move(X,Y);
-log.log(&quot;X: %d, Y: %d, index: %d&quot;, X, Y, index);</body>
+              <body>Zombie tempZombie = zombieVector.getZombie(index);
+tempZombie.move(X,Y);
+zombieVector.zVector.at(index) = tempZombie;</body>
             </effect>
             <trigger xmi:type="uml:Trigger" xmi:id="_KvI0oHb5EeeKIIc_475P2A" event="_Pyh2oDmbEeetSfDhTP5ZLQ" port="_vEaVoHbaEeeXs9sY7gI7cA"/>
           </transition>
           <transition xmi:type="uml:Transition" xmi:id="_HKFkEHb6EeeKIIc_475P2A" name="" kind="external" source="_Xh0lIHbGEeeXs9sY7gI7cA" target="_Xh0lIHbGEeeXs9sY7gI7cA">
             <effect xmi:type="uml:OpaqueBehavior" xmi:id="_Rw7VAHb8EeeKIIc_475P2A" name="Effect" isReentrant="false">
               <language>C++</language>
-              <body>zombieVector.getZombie(index).move(X,Y);
-log.log(&quot;X: %d, Y: %d, index: %d&quot;, X, Y, index);</body>
+              <body>Zombie tempZombie = zombieVector.getZombie(index);
+tempZombie.move(X,Y);
+zombieVector.zVector.at(index) = tempZombie;</body>
             </effect>
             <trigger xmi:type="uml:Trigger" xmi:id="_INLYwHb6EeeKIIc_475P2A" event="_Pyh2oDmbEeetSfDhTP5ZLQ" port="_vEaVoHbaEeeXs9sY7gI7cA"/>
           </transition>
@@ -658,72 +660,64 @@ log.log(&quot;X: %d, Y: %d, index: %d&quot;, X, Y, index);</body>
             <entry xmi:type="uml:OpaqueBehavior" xmi:id="_ckZfcHbMEeeXs9sY7gI7cA" name="Entry" isReentrant="false">
               <language>C++</language>
               <body>if (notFirstZombie){
-if (x ==  zombieVector.getZombie(index).getX() &amp;&amp; y == zombieVector.getZombie(index).getY()){
-log.log(&quot;index: %d, d: %d&quot;, index, zombieVector.getZombie(index).currentDirection());
-switch(zombieVector.getZombie(index).currentDirection()){
-case 0: 
-zombieVector.getZombie(index).changeDirection(1);
-break;
-case 1: 
-zombieVector.getZombie(index).changeDirection(0);
-break;
-case 2: 
-zombieVector.getZombie(index).changeDirection(3);
-break;
-case 3: 
-zombieVector.getZombie(index).changeDirection(2);
-break;
-}
-log.log(&quot;index: %d, d: %d&quot;, index, zombieVector.getZombie(index).currentDirection());
-}
-index = index + 1;
-x = zombieVector.getZombie(index).getX();
-y = zombieVector.getZombie(index).getY();
-log.log(&quot;incrementing&quot;);
-log.log(&quot;_____________________________________&quot;);
-log.log(&quot;moving zombie %d&quot;, index);
-log.log(&quot;x: %d, y: %d, index: %d&quot;, x, y, index);
-directions.directionsCalc(x, y, zombieVector.getZombie(index).currentDirection()).send();
-}
-if (index == maxZombie){
-log.log(&quot;RESETING&quot;);
-log.log(&quot;________________________________________________&quot;);
-index = 0;
-notFirstZombie = false;
-timing.informIn(UMLRTTimespec(this->delay,0));
-}
-</body>
+Zombie tempZombie = zombieVector.getZombie(index);
+    if (x ==  tempZombie.getX() &amp;&amp; y == tempZombie.getY()){
+    switch(tempZombie.currentDirection()){
+    case 0: 
+    tempZombie.changeDirection(1);
+    break;
+    case 1: 
+    tempZombie.changeDirection(0);
+    break;
+    case 2: 
+    tempZombie.changeDirection(3);
+    break;
+    case 3: 
+    tempZombie.changeDirection(2);
+    break;
+    }
+    zombieVector.zVector.at(index) = tempZombie;
+    }
+    index = index + 1;
+    if (index &lt;= maxZombie){
+    x = zombieVector.getZombie(index).getX();
+    y = zombieVector.getZombie(index).getY();
+    directions.directionsCalc(x, y, zombieVector.getZombie(index).currentDirection()).send();
+    }
+    }
+    if (index > maxZombie){
+    index = 0;
+    notFirstZombie = false;
+    timing.informIn(UMLRTTimespec(this->delay,0));
+    }</body>
             </entry>
           </subvertex>
           <subvertex xmi:type="uml:State" xmi:id="_IVV5QHbZEeeXs9sY7gI7cA" name="Start">
             <entry xmi:type="uml:OpaqueBehavior" xmi:id="_jncAYHb4EeeKIIc_475P2A" name="Entry" isReentrant="false">
               <language>C++</language>
-              <body>
-x = zombieVector.getZombie(index).getX();
-y = zombieVector.getZombie(index).getY();
-log.log(&quot;_____________________________________&quot;);
-log.log(&quot;moving zombie %d&quot;, index);
-log.log(&quot;x: %d, y: %d, index: %d&quot;, x, y, index);
-directions.directionsCalc(x, y, zombieVector.getZombie(index).currentDirection()).send();</body>
+              <body>    x = zombieVector.getZombie(index).getX();
+    y = zombieVector.getZombie(index).getY();
+    directions.directionsCalc(x, y, zombieVector.getZombie(index).currentDirection()).send();
+</body>
             </entry>
           </subvertex>
         </region>
       </ownedBehavior>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_VDAPMHFpEeepH5jGTij4Cg" name="Zombie" visibility="public">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_ZhUNkHFpEeepH5jGTij4Cg" name="x">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ZhUNkHFpEeepH5jGTij4Cg" name="x" visibility="public">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bcvYcHFpEeepH5jGTij4Cg" name="y">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_bcvYcHFpEeepH5jGTij4Cg" name="y" visibility="public">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_eTN2UHFpEeepH5jGTij4Cg" name="d">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_eTN2UHFpEeepH5jGTij4Cg" name="d" visibility="public">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
       <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_oftwYHI2EeeJYpdF89kMeA" name="moveImpl" specification="_8ypNMHFpEeepH5jGTij4Cg">
         <language>C++</language>
-        <body>    x = newX;
-    y = newY;
+        <body>    this->x = newX;
+    this->y = newY;
 </body>
       </ownedBehavior>
       <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vOIwMHI2EeeJYpdF89kMeA" name="getXImpl" specification="_rl6sUHI2EeeJYpdF89kMeA">
@@ -738,13 +732,13 @@ directions.directionsCalc(x, y, zombieVector.getZombie(index).currentDirection()
       </ownedBehavior>
       <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_110O0HI2EeeJYpdF89kMeA" name="changeDirectionImpl" specification="_JtUT4HFqEeepH5jGTij4Cg">
         <language>C++</language>
-        <body>    d = newD;
-    std::cout&lt;&lt; &quot;changed direction (method), d: &quot;&lt;&lt;d&lt;&lt;std::endl;
+        <body>this->d = newD;
 </body>
       </ownedBehavior>
       <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_6vukEHI2EeeJYpdF89kMeA" name="currentDirectionImpl" specification="_NKMqcHFqEeepH5jGTij4Cg">
         <language>C++</language>
-        <body>    return d;
+        <body>
+return (d);
 </body>
       </ownedBehavior>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_8ypNMHFpEeepH5jGTij4Cg" name="move" method="_oftwYHI2EeeJYpdF89kMeA">
@@ -799,6 +793,9 @@ directions.directionsCalc(x, y, zombieVector.getZombie(index).currentDirection()
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_PoDKsncBEeezX_4gmeWOEg" type="_VDAPMHFpEeepH5jGTij4Cg" direction="return"/>
       </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ONiHkHuuEee7RKzKc_Azzg" name="VectorWrapper">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_aDrPIHuuEee7RKzKc_Azzg" name="zombieVectorWrapper" visibility="public" type="_hizCkHIrEeeJYpdF89kMeA"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_fE_d8HovEeesmeF6iS6c6Q" name="Observation">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fE_d8XovEeesmeF6iS6c6Q" source="http://www.eclipse.org/papyrus-rt/language/1.0.0">
@@ -1063,10 +1060,10 @@ this->method->sendData(str);</body>
   <UMLRealTime:RTConnector xmi:id="_Or-r4ETsEeem9u7KRr3TyA" base_Connector="_Od3XYETsEeem9u7KRr3TyA"/>
   <ActionLanguage:TextualRepresentation xmi:id="_zVSOUEt_EeeD4eyKVO2S_Q" base_Comment="_y-eQ0Et_EeeD4eyKVO2S_Q" language="org.eclipse.papyrus.uml.textedit.state.xtext.UmlState"/>
   <UMLRTStateMachines:RTState xmi:id="_5YYYEGftEee-Kre0NmQF5w" base_State="_5YWi4GftEee-Kre0NmQF5w"/>
-  <RTCppProperties:CapsuleProperties xmi:id="_q_ffkGfwEee-Kre0NmQF5w" headerPreface="#include &lt;vector>&#xA;#include &quot;Zombie.hh&quot;&#xA;//#include &quot;EventObj.hh&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/core/include/opencv2/core.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/highgui/include/opencv2/highgui.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/imgcodecs/include/opencv2/imgcodecs.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/imgproc/include/opencv2/imgproc.hpp&quot;&#xA;using namespace cv;" implementationPreface="#include &lt;vector>&#xA;#include &quot;Zombie.hh&quot;&#xA;//#include &quot;EventObj.hh&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/core/include/opencv2/core.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/highgui/include/opencv2/highgui.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/imgcodecs/include/opencv2/imgcodecs.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/imgproc/include/opencv2/imgproc.hpp&quot;&#xA;using namespace cv;" base_Class="_LFgVYDvhEeePyrL5fVHxNw"/>
+  <RTCppProperties:CapsuleProperties xmi:id="_q_ffkGfwEee-Kre0NmQF5w" headerPreface="&#xA;#include &quot;Zombie.hh&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/core/include/opencv2/core.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/highgui/include/opencv2/highgui.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/imgcodecs/include/opencv2/imgcodecs.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/imgproc/include/opencv2/imgproc.hpp&quot;&#xA;using namespace cv;" implementationPreface="&#xA;#include &quot;Zombie.hh&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/core/include/opencv2/core.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/highgui/include/opencv2/highgui.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/imgcodecs/include/opencv2/imgcodecs.hpp&quot;&#xA;#include &quot;external_resources/opencv/sources/modules/imgproc/include/opencv2/imgproc.hpp&quot;&#xA;using namespace cv;" base_Class="_LFgVYDvhEeePyrL5fVHxNw"/>
   <RTCppProperties:AttributeProperties xmi:id="_XzrVgGfxEee-Kre0NmQF5w" type="Mat" base_Property="_XzqHYGfxEee-Kre0NmQF5w"/>
   <UMLRTStateMachines:RTPseudostate xmi:id="_Xrw6MGfyEee-Kre0NmQF5w" base_Pseudostate="_XrsowGfyEee-Kre0NmQF5w"/>
-  <RTCppProperties:PassiveClassProperties xmi:id="_lLmVQHIrEeeJYpdF89kMeA" headerPreface="#include &lt;vector>&#xA;#include &quot;Zombie.hh&quot;" base_Class="_hizCkHIrEeeJYpdF89kMeA"/>
+  <RTCppProperties:PassiveClassProperties xmi:id="_lLmVQHIrEeeJYpdF89kMeA" headerPreface="#include &lt;vector>&#xA;#include &lt;iostream>&#xA;using namespace std;&#xA;" base_Class="_hizCkHIrEeeJYpdF89kMeA" publicDeclarations="friend ostream &amp; operator&lt;&lt;(ostream &amp; os, const Vector &amp; v)&#xA;{&#xA;    os &lt;&lt; &quot;Vector { &quot;;&#xA;    int len = v.zVector.size();&#xA;    int i = 0;&#xA;    for (std::vector&lt;Zombie>::const_iterator it = v.zVector.begin(); it != v.zVector.end(); it++, i++)&#xA;    {&#xA;        os &lt;&lt; *it;&#xA;        if (i &lt; len - 1) os &lt;&lt; &quot;, &quot;;&#xA;    }&#xA;    os &lt;&lt; &quot; }&quot;;&#xA;    return os;&#xA;}&#xA;"/>
   <RTCppProperties:AttributeProperties xmi:id="_bl2GgHIsEeeJYpdF89kMeA" type="std::vector&lt;Zombie>" base_Property="_sgoCEHIrEeeJYpdF89kMeA"/>
   <UMLRealTime:Capsule xmi:id="_FX58QHL-EeeXs9sY7gI7cA" base_Class="_FQa0MHL-EeeXs9sY7gI7cA"/>
   <UMLRTStateMachines:RTPseudostate xmi:id="_x3x3IHbEEeeXs9sY7gI7cA" base_Pseudostate="_x3uMwHbEEeeXs9sY7gI7cA"/>
@@ -1108,5 +1105,6 @@ this->method->sendData(str);</body>
   <RTCppProperties:ArtifactProperties xmi:id="_fFB6NnovEeesmeF6iS6c6Q" base_Artifact="_fE_eHHovEeesmeF6iS6c6Q" includeFile="/*&#xA; * Config.hh&#xA; *&#xA; *  Created on: Jun 29, 2017&#xA; *      Author: nicolas&#xA; */&#xA;&#xA;#ifndef CONFIG_HH_&#xA;#define CONFIG_HH_&#xA;&#xA;#include &lt;string>&#xA;#include &lt;map>&#xA;&#xA;class Config {&#xA;&#xA;private:&#xA;&#x9;std::string configFileName;&#xA;&#x9;std::string fieldSeparator;&#xA;&#x9;std::string commentStr;&#xA;&#x9;std::string getConfigPath();&#xA;&#x9;std::map&lt;std::string, std::string> configList;&#xA;&#xA;public:&#xA;&#x9;Config();&#xA;&#x9;~Config();&#xA;&#x9;int load();&#xA;&#x9;void append(std::string key, std::string value);&#xA;&#x9;std::string get(std::string key);&#xA;&#x9;void setConfigFileName(const std::string configFileName);&#xA;&#x9;const std::string getConfigFileName() const;&#xA;&#xA;&#x9;void setFieldSeparator(const std::string fieldSeparator);&#xA;&#x9;const std::string getFieldSeparator() const;&#xA;&#xA;&#x9;void setCommentStr(const std::string commentStr);&#xA;&#x9;const std::string getCommentStr() const;&#xA;&#xA;&#x9;const std::map&lt;std::string, std::string> getConfigList() const;&#xA;};&#xA;&#xA;#endif /* CONFIG_HH_ */" sourceFile="/*&#xA; * Config.cc&#xA; *&#xA; *  Created on: Jun 29, 2017&#xA; *      Author: nicolas&#xA; */&#xA;&#xA;#include &quot;Config.hh&quot;&#xA;&#xA;#include &lt;stdio.h>&#xA;#include &lt;fstream>&#xA;#include &lt;iostream>&#xA;#include &lt;unistd.h>&#xA;&#xA;using namespace std;&#xA;&#xA;Config::Config() {&#xA;&#x9;this->setConfigFileName(&quot;config&quot;);&#xA;&#x9;this->setFieldSeparator(&quot;=&quot;);&#xA;&#x9;this->setCommentStr(&quot;#&quot;);&#xA;}&#xA;&#xA;Config::~Config() {&#xA;}&#xA;&#xA;int Config::load() {&#xA;&#xA;&#x9;int result = 0;&#xA;&#x9;std::string prefix = &quot;&quot;;&#xA;&#x9;std::string configPath = this->getConfigPath();&#xA;&#x9;std::ifstream configFile(configPath.c_str());&#xA;&#x9;std::string line;&#xA;&#xA;&#x9;if (configFile.is_open()) {&#xA;&#x9;&#x9;while (std::getline(configFile, line)) {&#xA;&#xA;&#x9;&#x9;&#x9;std::string key, value;&#xA;&#xA;&#x9;&#x9;&#x9;// skip the space and comment line&#xA;&#x9;&#x9;&#x9;std::string::size_type nonSpaceCharIndex = line.find_first_not_of(&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&quot; \f\t\v&quot;);&#xA;&#x9;&#x9;&#x9;if (nonSpaceCharIndex == std::string::npos)&#xA;&#x9;&#x9;&#x9;&#x9;continue; // line is empty, skp it&#xA;&#xA;&#x9;&#x9;&#x9;if (this->commentStr.find(line[nonSpaceCharIndex])&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;!= std::string::npos)&#xA;&#x9;&#x9;&#x9;&#x9;continue; // skip the line , it is a comment line&#xA;&#xA;&#x9;&#x9;&#x9;// Check if it is a definition of a specific rule&#xA;&#x9;&#x9;&#x9;std::string::size_type prefixIndex = line.find(&quot;[&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;nonSpaceCharIndex);&#xA;&#x9;&#x9;&#x9;if (prefixIndex != std::string::npos) {&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;std::string::size_type valueNonSpaceCharIndex =&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;line.find_first_not_of(&quot; \f\t\v&quot;, prefixIndex + 1);&#xA;&#x9;&#x9;&#x9;&#x9;std::string p = line.substr(valueNonSpaceCharIndex);&#xA;&#x9;&#x9;&#x9;&#x9;p.erase(p.find_last_not_of(&quot; \f\t\v&quot;));&#xA;&#x9;&#x9;&#x9;&#x9;p.erase(p.find_last_not_of(&quot; \f\t\v&quot;) + 1);&#xA;&#x9;&#x9;&#x9;&#x9;prefix = p;&#xA;&#x9;&#x9;&#x9;&#x9;continue;&#xA;&#x9;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;&#x9;// extract key value&#xA;&#x9;&#x9;&#x9;std::string::size_type sepIndex = line.find(&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this->getFieldSeparator(), nonSpaceCharIndex);&#xA;&#x9;&#x9;&#x9;if (sepIndex == std::string::npos)&#xA;&#x9;&#x9;&#x9;&#x9;continue; // the line doesn't contain the seperator&#xA;&#xA;&#x9;&#x9;&#x9;key = line.substr(nonSpaceCharIndex, sepIndex - nonSpaceCharIndex);&#xA;&#x9;&#x9;&#x9;key.erase(key.find_last_not_of(&quot; \f\t\v&quot;) + 1);&#xA;&#xA;&#x9;&#x9;&#x9;if (key.empty())&#xA;&#x9;&#x9;&#x9;&#x9;continue; // the kwy should have value&#xA;&#xA;&#x9;&#x9;&#x9;if (sepIndex + 1 == line.length())&#xA;&#x9;&#x9;&#x9;&#x9;continue; // there is no value&#xA;&#xA;/// extract the value&#xA;&#x9;&#x9;&#x9;std::string::size_type valueNonSpaceCharIndex =&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;line.find_first_not_of(&quot; \f\t\v&quot;, sepIndex + 1);&#xA;&#xA;&#x9;&#x9;&#x9;if (valueNonSpaceCharIndex == std::string::npos)&#xA;&#x9;&#x9;&#x9;&#x9;continue; // there is no value&#xA;&#xA;&#x9;&#x9;&#x9;std::string::size_type valueLastNonSpaceCharIndex =&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;line.find_last_not_of(&quot; \f\t\v&quot;);&#xA;&#x9;&#x9;&#x9;value = line.substr(valueNonSpaceCharIndex,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;valueLastNonSpaceCharIndex - valueNonSpaceCharIndex + 1);&#xA;&#x9;&#x9;&#x9;if (!prefix.empty())&#xA;&#x9;&#x9;&#x9;&#x9;key = prefix + &quot;.&quot; + key;&#xA;&#x9;&#x9;&#x9;this->append(key, value);&#xA;&#x9;&#x9;&#x9;printf(&quot;%s=%s\n&quot;, key.c_str(), value.c_str());&#xA;&#x9;&#x9;&#x9;result = result + 1;&#xA;&#x9;&#x9;}&#xA;&#x9;} else {&#xA;&#x9;&#x9;std::cerr &lt;&lt; &quot;Error in reading configuration file from &quot; &lt;&lt; configPath&#xA;&#x9;&#x9;&#x9;&#x9;&lt;&lt; std::endl;&#xA;&#x9;&#x9;result = -1;&#xA;&#x9;}&#xA;&#x9;configFile.close();&#xA;&#x9;return result;&#xA;}&#xA;&#xA;void Config::append(std::string key, std::string value) {&#xA;&#x9;if (!key.empty())&#xA;&#x9;&#x9;this->configList[key] = value;&#xA;}&#xA;&#xA;std::string Config::get(std::string key) {&#xA;&#x9;bool n = this->configList.count(key);&#xA;&#x9;return (n) ? this->configList.at(key) : &quot;&quot;;&#xA;}&#xA;&#xA;/**&#xA; * Resolve the full path from the exec path&#xA; */&#xA;std::string Config::getConfigPath() {&#xA;&#xA;&#x9;char result[255];&#xA;&#x9;std::string path;&#xA;&#xA;&#x9;ssize_t len = ::readlink(&quot;/proc/self/exe&quot;, result, sizeof(result));&#xA;&#x9;if (len != -1) {&#xA;&#x9;&#x9;path = std::string(result);&#xA;&#x9;}&#xA;&#xA;// find the last &quot;/&quot; position&#xA;&#x9;size_t n = path.rfind('/');&#xA;&#xA;// remove the last fragment of the path&#xA;&#x9;path = (n > 0) ? path.substr(0, n) : &quot;&quot;;&#xA;&#xA;// return the full path&#xA;&#x9;return (path != &quot;&quot;) ?&#xA;&#x9;&#x9;&#x9;path + &quot;/&quot; + this->configFileName : this->configFileName;&#xA;}&#xA;&#xA;void Config::setConfigFileName(const std::string configFileName) {&#xA;&#x9;this->configFileName = configFileName;&#xA;}&#xA;&#xA;const std::string Config::getConfigFileName() const {&#xA;&#x9;return this->configFileName;&#xA;}&#xA;&#xA;void Config::setFieldSeparator(const std::string fieldSeparator) {&#xA;&#x9;this->fieldSeparator = fieldSeparator;&#xA;}&#xA;&#xA;const std::string Config::getFieldSeparator() const {&#xA;&#x9;return this->fieldSeparator;&#xA;}&#xA;&#xA;void Config::setCommentStr(const std::string commentStr) {&#xA;&#x9;this->commentStr = commentStr;&#xA;}&#xA;&#xA;const std::string Config::getCommentStr() const {&#xA;&#x9;return this->commentStr;&#xA;}&#xA;&#xA;const std::map&lt;std::string, std::string> Config::getConfigList() const {&#xA;&#x9;return this->configList;&#xA;}"/>
   <UMLRealTime:RTPort xmi:id="_hqIUMHovEeesmeF6iS6c6Q" isPublish="false" isWired="false" base_Port="_hqCNkHovEeesmeF6iS6c6Q"/>
   <UMLRealTime:CapsulePart xmi:id="_nnPL0HovEeesmeF6iS6c6Q" base_Property="_nnMvkHovEeesmeF6iS6c6Q"/>
-  <RTCppProperties:PassiveClassProperties xmi:id="_n7ytQHo0EeesmeF6iS6c6Q" implementationPreface="#include &lt;iostream>" base_Class="_VDAPMHFpEeepH5jGTij4Cg"/>
+  <RTCppProperties:PassiveClassProperties xmi:id="_n7ytQHo0EeesmeF6iS6c6Q" headerPreface="#include &lt;iostream>&#xA;&#xA;using namespace std;&#xA;" implementationPreface="" base_Class="_VDAPMHFpEeepH5jGTij4Cg" publicDeclarations="friend ostream &amp; operator&lt;&lt;( ostream &amp; os, const Zombie &amp; z)&#xA;{&#xA;    os &lt;&lt; &quot;Zombie(\&quot;&quot; &lt;&lt; z.x &lt;&lt; z.y &lt;&lt; z.d &lt;&lt; &quot;\&quot;)&quot;;&#xA;    return os;&#xA;}&#xA;"/>
+  <RTCppProperties:CapsuleProperties xmi:id="_d-bvEHxfEeeS-rP0X-36Iw" implementationPreface="#include &lt;iostream>" base_Class="_FQa0MHL-EeeXs9sY7gI7cA"/>
 </xmi:XMI>
